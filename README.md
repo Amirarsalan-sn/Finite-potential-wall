@@ -4,8 +4,20 @@ In this project I've developed a program using python that simulates the behavio
 
 It is easy to use the program. Hence, this README mainly focuses on the formalism of the problem and driving the equations from scratch (Schrödinger equation). To run a simulation, you just have to adjust the global variables at the top of the code to your desired value and run the main program, after that a video of the simulation will be saved on your computer.
 
-## Table of Content
-
+## Table of Contents  
+1. [Problem Specification](#problem-specification)  
+2. [Eigenfunctions of Hamiltonian](#eigenfunctions-of-hamiltonian)  
+   - [E < V0](#e--v0)  
+   - [E > V0](#e--v0-1)  
+3. [Transmission and Reflection Coefficients](#transmission-and-reflection-coefficients)  
+   - [For E < V0](#transmission-and-reflection-coefficients-for-e--v0)  
+   - [For E > V0](#transmission-and-reflection-coefficients-for-e--v0-1)  
+4. [Normalization of Eigenstates](#normalization-of-eigenstates)  
+   - [Proof 1](#proof-1)  
+   - [Proof 2](#proof-2)  
+5. [Minimum Error Wave Packet](#minimum-error-wave-packet)  
+6. [Conclusion](#conclusion)  
+7. [Simple Demonstration](#simple-demonstration)  
 ## Problem Specification
 We first start by writing the time dependent and independent Schrödinger equations:
 
@@ -403,7 +415,7 @@ e^{i\kappa x} + 0e^{-i\kappa x} & x < -a \\
 ```
 As it is seen, $\psi_\kappa$ converges to $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$ as $V_0$ goes to zero.
 
-In this section, the normalization factor for eigenkets of hamiltonian was specified, next, a minimum error wave packet is created and the coefficient of each eigenstate ($c(\kappa)$) is calculated. This is necessary because in this simulation all the initial states are minimum error wave packets.
+In this section, the normalization factor for eigenkets of hamiltonian was specified, next, a minimum error wave packet is created and the coefficient of each eigenstate ( $c(\kappa)$ ) is calculated. This is necessary because in this simulation all the initial states are minimum error wave packets.
 ## Minimum Error Wave Packet
 A minimum error wave packet is a wave packet whose variance in position and momentum is minimum. According to the Heisenberg uncertainty principle $\sigma^2_x\sigma^2_p \ge \frac{\hbar^2}{4}$ and a minimum error wave packet is a wave packet with $\sigma^2_x = \sigma^2_p = \frac{\hbar}{2}$ and its formula is as follows:
 
@@ -446,6 +458,8 @@ c(\kappa) = \langle \psi_\kappa | \psi_{MEWP} \rangle = \left[\frac{e^{i\left(\f
 ```
 
 
+
+
 Using this formula, the coefficient of each eigenstate in the superposition can be calculated.
 
 
@@ -454,4 +468,4 @@ In this article, the Finite Potential Wall problem was studied and analysed. The
 
 
 ## Simple Demonstration
-For veiw a run sample of the simulation code you can see my [linkedin post](). Feel free to share your opinion on this project with me. Thank you for reading this article, hope you've enjoyed this simulation project!
+To veiw a run sample of the simulation code you can see my [linkedin post](). Feel free to share your opinion on this project with me. Thank you for reading this article, hope you've enjoyed this simulation project!
