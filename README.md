@@ -446,11 +446,12 @@ c(\kappa) = \langle \psi_\kappa | \psi_{MEWP} \rangle = \left[\frac{e^{i\left(\f
 ```
 
 
-Using this formula, the coefficient of each eigenstate in superposition can be calculated.
+Using this formula, the coefficient of each eigenstate in the superposition can be calculated.
 
 
 ## Conclusion
-In this article, the Finite Potential Wall problem was studied and analysed. The eigenstates of hamiltonian were calculated along with their 
+In this article, the Finite Potential Wall problem was studied and analysed. The eigenstates of hamiltonian were calculated along with the relationship between the coefficients inside each. The normalization factor was specified and two proofs were given for that. After that, a minimum error wave packet was created as the initial state, then, the coefficients of each eigenfunction inside the superposition was explicitly evaluated. Knowing all of these equations and formulas, enables us to simulate the movement of a minimum error wave packet (with average monemtum of $\overline{p}$) along with its interaction with the potential wall demonstrating the quantum tunneling phenomenon.
 
 
 ## Simple Demonstration
+For veiw a run sample of the simulation code you can see my [linkedin post](). Feel free to share your opinion on this project with me. Thank you for reading this article, hope you've enjoyed this simulation project!
