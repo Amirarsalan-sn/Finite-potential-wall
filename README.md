@@ -15,7 +15,7 @@ It is easy to use the program. Hence, this README mainly focuses on the formalis
 4. [Normalization of Eigenstates](#normalization-of-eigenstates)  
    - [Proof 1](#proof-1)  
    - [Proof 2](#proof-2)  
-5. [Minimum Error Wave Packet](#minimum-error-wave-packet)  
+5. [Minimum Uncertainty Wave Packet](#minimum-uncertainty-wave-packet)  
 6. [Conclusion](#conclusion)  
 7. [Simple Demonstration](#simple-demonstration)  
 ## Problem Specification
@@ -415,9 +415,9 @@ e^{i\kappa x} + 0e^{-i\kappa x} & x < -a \\
 ```
 As it is seen, $\psi_\kappa$ converges to $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$ as $V_0$ goes to zero.
 
-In this section, the normalization factor for eigenkets of hamiltonian was specified, next, a minimum error wave packet is created and the coefficient of each eigenstate ( $c(\kappa)$ ) is calculated. This is necessary because in this simulation all the initial states are minimum error wave packets.
-## Minimum Error Wave Packet
-A minimum error wave packet is a wave packet whose variance in position and momentum is minimum. According to the Heisenberg uncertainty principle $\sigma^2_x\sigma^2_p \ge \frac{\hbar^2}{4}$ and a minimum error wave packet is a wave packet with $\sigma^2_x = \sigma^2_p = \frac{\hbar}{2}$ and its formula is as follows:
+In this section, the normalization factor for eigenkets of hamiltonian was specified, next, a minimum uncertainty wave packet is created and the coefficient of each eigenstate ( $c(\kappa)$ ) is calculated. This is necessary because in this simulation all the initial states are minimum uncertainty wave packets.
+## Minimum Uncertainty Wave Packet
+A minimum uncertainty wave packet is a wave packet whose variance in position and momentum is minimum. According to the Heisenberg uncertainty principle $\sigma^2_x\sigma^2_p \ge \frac{\hbar^2}{4}$ and a minimum uncertainty wave packet is a wave packet with $\sigma^2_x = \sigma^2_p = \frac{\hbar}{2}$ and its formula is as follows:
 
 ```math
 \psi_{MEWP}(x) = \left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x}}e^{\frac{i}{\hbar}\overline{p}x}
@@ -464,7 +464,7 @@ Using this formula, the coefficient of each eigenstate in the superposition can 
 
 
 ## Conclusion
-In this article, the Finite Potential Wall problem was studied and analysed. The eigenstates of hamiltonian were calculated along with the relationship between the coefficients inside each. The normalization factor was specified and two proofs were given for that. After that, a minimum error wave packet was created as the initial state, then, the coefficients of each eigenfunction inside the superposition was explicitly evaluated. Knowing all of these equations and formulas, enables us to simulate the movement of a minimum error wave packet (with average monemtum of $\overline{p}$) along with its interaction with the potential wall demonstrating the quantum tunneling phenomenon.
+In this article, the Finite Potential Wall problem was studied and analysed. The eigenstates of hamiltonian were calculated along with the relationship between the coefficients inside each. The normalization factor was specified and two proofs were given for that. After that, a minimum uncertainty wave packet was created as the initial state, then, the coefficients of each eigenfunction inside the superposition was explicitly evaluated. Knowing all of these equations and formulas, enables us to simulate the movement of a minimum uncertainty wave packet (with average monemtum of $\overline{p}$) along with its interaction with the potential wall demonstrating the quantum tunneling phenomenon.
 
 
 ## Simple Demonstration
