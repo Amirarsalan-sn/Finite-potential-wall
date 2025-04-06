@@ -88,12 +88,12 @@ The term $E - V_0$ is positive in this spectrum, we define $\kappa = \sqrt{\frac
 ```math
 \psi_{\kappa}(x) = \begin{cases}
 Ae^{i\kappa x} + Be^{-i\kappa x} & x < -a \\
-C\cos(kx) + D\sin(-kx) & -a \le x \le a \\
+C\cos(kx) + D\sin(kx) & -a \le x \le a \\
 Fe^{i\kappa x} + Ge^{-i\kappa x} & x > -a \\
 \end{cases}
 ```
 
-In this section, we found the eigenfunctions of hamiltonian which form an orthonormal basis for our hilbert space. In the next section, the transmission and reflection coefficients are going to be calculated by applying the boundry conditions to $\psi_{\kappa} (x)$.
+In this section, we found the eigenfunctions of hamiltonian which form an complete orthogonal basis for our hilbert space. In the next section, the transmission and reflection coefficients are going to be calculated by applying the boundary conditions to $\psi_{\kappa} (x)$.
 
 ## Transmission and Reflection Coefficients for E < V0
 Before diving deep into calculations, it is worth noting that singularities and discontinuities in $\psi_{\kappa}$ is always two steps better than singularities and discontinuities in $V(x)$ and that's because of the time independent Schrödinger equation:
@@ -101,11 +101,11 @@ Before diving deep into calculations, it is worth noting that singularities and 
 ```math
 \frac{d^2}{dx^2}\psi(x) = \frac{-2m}{\hbar^2}\left(E - V(x)\right)\psi(x)
 ```
-As it is seen from the equation, in order to get $\psi_{\kappa}$, one should integrate $\frac{-2m}{\hbar^2}\left(E - V(x)\right)\psi(x)$ two times. Hence, if the potential has simple discontinuities (like the finite potential wall), $\psi_{\kappa}$ and $\frac{d}{dx}\psi_{\kappa}$ should be continueous, and that's what gives us the *boundry conditions*. With these conditions we are able to calculate the transmission and reflection coefficients.
+As it is seen from the equation, in order to get $\psi_{\kappa}$, one should integrate $\frac{-2m}{\hbar^2}\left(E - V(x)\right)\psi(x)$ two times. Hence, if the potential has simple discontinuities (like the finite potential wall), $\psi_{\kappa}$ and $\frac{d}{dx}\psi_{\kappa}$ should be continueous, and that's what gives us the *boundary conditions*. With these conditions we are able to calculate the transmission and reflection coefficients.
 
-Another important thing to note is that we normaly assume the eigenfunctions to scatter from left to right (or right to left) to make the calculation of coefficients easier and more interpretable. Without this assumption, it would be to hard too find any relationship between the coefficients of $\psi$ just by applying the boundry conditions. Thus, the value of $G$ is assumed to be zero throughout the calculations and simulations.
+Another important thing to note is that we normaly assume the eigenfunctions to scatter from left to right (or right to left) to make the calculation of coefficients easier and more interpretable. Without this assumption, it would be to hard too find any relationship between the coefficients of $\psi$ just by applying the boundary conditions. Thus, the value of $G$ is assumed to be zero throughout the calculations and simulations.
 
-The eigenstates and boundry conditions for $E < V_0$ are:
+The eigenstates and boundary conditions for $E < V_0$ are:
 
 ```math
 \psi_{\kappa}(x) = \begin{cases}
@@ -219,10 +219,10 @@ The interesting fact is that if you calculate $\left\Vert\frac{F}{A}\right\Vert^
 
 Another interesting fact is that despite the fact that $E < V_0$ in this spectrum, yet some part of the quantum particle manages to pass the potential wall!!
 
-In this section we explored the relationship between the coefficients inside the eigenstates of hamiltonian by applying the boundry conditions on them. We calculated the relation between $A$ and $B$, $A$ and $F$, $C$ and $D$ and $C$ and $F$. This means by knowing only one of these coefficients (lets say $A$), all the other coefficients can be calculated using the relations discovered earlier. In the next section, the exact same thing will be calculated but for eigenfunctions which their energies exceed $V_0$.
+In this section we explored the relationship between the coefficients inside the eigenstates of hamiltonian by applying the boundary conditions on them. We calculated the relation between $A$ and $B$, $A$ and $F$, $C$ and $D$ and $C$ and $F$. This means by knowing only one of these coefficients (lets say $A$), all the other coefficients can be calculated using the relations discovered earlier. In the next section, the exact same thing will be calculated but for eigenfunctions which their energies exceed $V_0$.
 
 ## Transmission and Reflection Coefficients for E > V0
-In this spectrum, the boundry conditions are the same, but the shape of eigenstates is different:
+In this spectrum, the boundary conditions are the same, but the shape of eigenstates is different:
 
 ```math
 \psi_{\kappa}(x) = \begin{cases}
@@ -266,7 +266,10 @@ i\kappa\left(Fe^{i\kappa a}\right) = k\left(-C\sin(ka) + D\cos(ka)\right) & (\te
 (\text{I}) \rightarrow Ae^{-i\kappa a} + Be^{i\kappa a} = C\cos(ka) - \frac{C\left(k\sin^2(ka) + i\kappa\cos(ka)\sin(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}
 ```
 ```math
-\implies Ae^{-i\kappa a} + Be^{i\kappa a} = \frac{C\left(k\cos^2(ka) - i\kappa\sin(ka)cos(ka)\right) - C\left(ksin^(ka) + i\kappa\sin(ka)\cos(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)} = \frac{C\left(k\cos(2ka) - i\kappa\sin(2ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}
+\implies Ae^{-i\kappa a} + Be^{i\kappa a} = \frac{C\left(k\cos^2(ka) - i\kappa\sin(ka)cos(ka)\right) - C\left(ksin^(ka) + i\kappa\sin(ka)\cos(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}
+```
+```math
+= \frac{C\left(k\cos(2ka) - i\kappa\sin(2ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}
 ```
 ```math
 (\text{III}) \rightarrow i\kappa\left( Ae^{-i\kappa a} - Be^{i\kappa a}\right) = k\left[C\sin(ka) + \frac{C\left(k\sin(ka)\cos(ka) + i\kappa\cos^2(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}\right]
@@ -294,7 +297,10 @@ Now, it is time to calculate $\frac{F}{A}$:
 (\text{IV}) \rightarrow i\kappa\left(Fe^{i\kappa a}\right) = k\left(-C\sin(ka) + \frac{C\left(k\sin(ka)\cos(ka) + i\kappa\cos^2(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}\right)
 ```
 ```math
-= k\left[\frac{C\left(-k\sin(ka)\cos(ka) + i\kappa\sin^2(ka)\right) + C\left(k\sin(ka)\cos(ka) + i\kappa\cos^2(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}\right] \implies i\kappa\left(Fe^{i\kappa a}\right) = \frac{Ci\kappa k}{k\cos(ka) - i\kappa\sin(ka)}
+= k\left[\frac{C\left(-k\sin(ka)\cos(ka) + i\kappa\sin^2(ka)\right) + C\left(k\sin(ka)\cos(ka) + i\kappa\cos^2(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}\right] 
+```
+```math
+\implies i\kappa\left(Fe^{i\kappa a}\right) = \frac{Ci\kappa k}{k\cos(ka) - i\kappa\sin(ka)}
 ```
 ```math
 \implies \frac{F}{A} = \frac{2i\kappa k}{\left(k^2 + \kappa^2 \right)\sin(2ka) + 2i\kappa k\cos(2ka)}e^{-2i\kappa a}
@@ -304,9 +310,147 @@ Again, if you compute $\left\Vert\frac{F}{A}\right\Vert^2 + \left\Vert\frac{B}{A
 
 In this section the *Transmission* and *Reflection* rates were calculated and in the next section, the Normalization factor for eigenstates of hamiltonian will be examined.
 ## Normalization of Eigenstates
+As you may know, for us to be able to work with eigenvectors of hamiltonian and create wave-packets, they should be normalized, meaning:
+```math
+\langle \psi_{\kappa} | \psi_{\kappa'}\rangle = \delta(\kappa - \kappa')
+```
+As an example, consider a free particle ($\psi(x) = e^{i\kappa x}$), in this case the normalization factor is calculated like below:
+```math
+\langle \psi_{\kappa} | \psi_{\kappa'}\rangle = \int_{-\infty}^{+\infty} Ne^{-i\kappa x}Ne^{i\kappa x} dx = N^2\int_{-\infty}^{+\infty} e^{-i\kappa x}e^{i\kappa x} dx = 2\pi\delta(\kappa - \kappa')
+```
+```math
+\implies N = \frac{1}{\sqrt{2\pi}}
+```
+Therefore, $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$ is a normalized eigenket. However, the problem here is that if we want to calculate the normalization factor for eigenkets of hamiltonian for this problem, we would encounter so many integrals that may not be evaluated easily. This is because the wavefunction has three parts and each of them should be integrated seperately. Even the first and the third part with exponential terms cannot be evaluated like free particle because the boundaries of integration is not $-\infty \to +\infty$. So, what is the normalization factor in this specific problem?
+```math
+\psi_\kappa(x) = N \begin{cases}
+e^{i\kappa x} + re^{-i\kappa x} & x < -a \\
+\text{(some expression at the middle region)} & -a \le x \le a \\
+te^{i\kappa x} & x > a
+\end{cases}
+```
+```math
+\implies N = ?
+```
+I'll give the answer straightforward and then give two proofs stating why the answer is correct. First, the answer is $N = \frac{1}{\sqrt{2\pi}}$, but why?
 
+Before diving into the proofs, it is very important to review an interesting fact in quantum mechanics. And that is the probablity current conservation law which comes from the Schrödinger equation itself. 
+```math
+\partial_t\rho + \nabla \cdot \vec{j} = 0,      (\rho = \Psi^*\Psi,        \vec{j} = \frac{i\hbar}{2m}\nabla\cdot\left(\nabla\Psi^*\Psi - \Psi^*\nabla\Psi\right)
+```
+```math
+\implies \frac{d}{dt}\int \rho dv = -\oint\vec{j}\cdot\hat{n}dA
+```
+This means if a wavefunction is an answer to the Schrödinger equation, its norm ($\langle\psi|\psi\rangle$) doesn't change over time as long as no probability is destroyed or created. This was the prerequisite to the proofs that are going to be explained below.
+
+### Proof 1
+As stated earlier, one can interpret the eigenstates for the finite potential wall problem, as free particles that were moving freely in the space until, at some point, they hit the wall and their shape changes to what we obtained earlier ($\psi_\kappa$). Now, throughout process, no probability is created or destroyed. Therefore, the norm of $\psi_\kappa$ is as same as the norm of $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$. Hence, the normalization factor that we are looking for is $\frac{1}{\sqrt{2\pi}}$.
+
+One can object this proof because a free particle's variance in position is infinite ($e^{i\kappa x}$). The particle exists everywhere all the time and no one can specify a start and an end for its movement. Hence, we can't assume that a free particle starts moving from an approximate point b and hits the wall at a certain point in time and space. It is already everywhere and obviously not free anymore since we have a potential wall. That's why I came up with another explanation.
+### Proof 2
+Suppose there is a free particle (absolutely free, meaning there is no potential wall anywhere). It exsits everywhere, but, at some time (lets say t), a potential barrier starts to raise up from the ground at the origin of the space with a width of $2a$. Therefore, the free particle changes its shape to $\psi_kappa$ and, again, since no probability is created or destroyed, the normalization factor remains the same.
+
+Now, another question that may arise is, how we know the changed shape of $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$ is exactly $\psi_\kappa$? To verify that $\lim_{V_0 \to 0} \psi_\kappa$ should be calculated and checked whether it is equal to $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$ or not. Suppose there is an eigenket with energy $E$, if $V_0$ is moved towards zero, no matter how small the energy is, at some point $V_0$ will become lower than $E$. Thus, the form of the wavefunction for $\lim_{V_0 \to 0} \psi_\kappa$, is as same the form of eigenstates with $E > V_0$:
+
+```math
+\lim_{V_0 \to 0} \frac{1}{\sqrt{2\pi}}\begin{cases}
+e^{i\kappa x} + re^{-i\kappa x} & x < -a \\
+C\cos(kx) + D\sin(kx) & -a \le x \le a \\
+te^{i\kappa x} & x > -a \\
+\end{cases}
+```
+```math
+, \kappa = \sqrt{\frac{2m}{\hbar^2}E} , k = \sqrt{\frac{2m}{\hbar^2}\left(E - V_0\right)}
+```
+```math
+\lim_{V_0 \to 0} \sqrt{\frac{2m}{\hbar^2}\left(E - V_0\right)} = \sqrt{\frac{2m}{\hbar^2}E} \implies k = \kappa
+```
+```math
+\lim_{V_0 \to 0} r = \lim_{V_0 \to 0} \left[\frac{\left(\kappa^2 - k^2 \right)\sin(2ka)}{\left(k^2 + \kappa^2 \right)\sin(2ka) + 2i\kappa k\cos(2ka)}\right]e^{-2i\kappa a} = \left[\frac{\left(0\right)\sin(2ka)}{\left(k^2 + \kappa^2 \right)\sin(2ka) + 2i\kappa k\cos(2ka)}\right]e^{-2i\kappa a} = 0
+```
+```math
+2i\kappa\left(Ae^{-i\kappa a}\right) = \frac{C\left(\left(k^2 + \kappa^2\right)\sin(2ka) + 2i\kappa k\cos(2ka)\right)}{k\cos(ka) - i\kappa\sin(ka)}, (A = 1,  V_0 \to 0 \implies k \to \kappa)
+```
+```math
+\implies 2i\kappa\left(e^{-i\kappa a}\right) = \frac{C\left(2\kappa^2\sin(2\kappa a) + 2i\kappa^2\cos(2\kappa a)\right)}{\kappa\cos(\kappa a) - i\kappa\sin(\kappa a)}
+```
+```math
+\implies 2i\kappa\left(e^{-i\kappa a}\right) = \frac{C2i\kappa^2\left(e^{-2i\kappa a}\right)}{\kappa\left(e^{-i\kappa a}\right)} \implies 2i\kappa\left(e^{-i\kappa a}\right) = 2iC\kappa\left(e^{-i\kappa a}\right) \implies C = 1
+```
+```math
+\frac{C\left(k\sin(ka) + i\kappa\cos(ka)\right)}{k\cos(ka) - i\kappa\sin(ka)} = D, (C = 1, V_0 \to 0 \implies k \to \kappa)
+```
+```math
+\frac{i\kappa\left(-i\sin(ka) + cos(ka)\right)}{\kappa\left(\cos(ka) - i\sin(ka)\right)} = D \implies D = i
+```
+```math
+\frac{F}{A} = \frac{2i\kappa k}{\left(k^2 + \kappa^2 \right)\sin(2ka) + 2i\kappa k\cos(2ka)}e^{-2i\kappa a}, (A = 1,  V_0 \to 0 \implies k \to \kappa) 
+```
+```math
+\implies \frac{F}{A} = \frac{2i\kappa^2}{2i\kappa^2\left(-i\sin(2\kappa a) + \cos(2\kappa a)\right)}e^{-2i\kappa a} \implies \frac{2i\kappa^2}{2i\kappa^2e^{-2i\kappa a}}e^{-2i\kappa a} \implies F = 1
+```
+```math
+\lim_{V_0 \to 0} \frac{1}{\sqrt{2\pi}}\begin{cases}
+e^{i\kappa x} + re^{-i\kappa x} & x < -a \\
+C\cos(kx) + D\sin(kx) & -a \le x \le a \\
+te^{i\kappa x} & x > -a \\
+\end{cases}
+= \frac{1}{\sqrt{2\pi}}\begin{cases}
+e^{i\kappa x} + 0e^{-i\kappa x} & x < -a \\
+1\cos(\kappa x) + i\sin(\kappa x) & -a \le x \le a \\
+1e^{i\kappa x} & x > -a \\
+\end{cases} = \frac{1}{\sqrt{2\pi}}e^{i\kappa x}
+```
+As it is seen, $\psi_\kappa$ converges to $\frac{1}{\sqrt{2\pi}}e^{i\kappa x}$ as $V_0$ goes to zero.
+
+In this section, the normalization factor for eigenkets of hamiltonian was specified, next, a minimum error wave packet is created and the coefficient of each eigenstate ($c(\kappa)$) is calculated. This is necessary because in this simulation all the initial states are minimum error wave packets.
 ## Minimum Error Wave Packet
+A minimum error wave packet is a wave packet whose variance in position and momentum is minimum. According to the Heisenberg uncertainty principle $\sigma^2_x\sigma^2_p \ge \frac{\hbar^2}{4}$ and a minimum error wave packet is a wave packet with $\sigma^2_x = \sigma^2_p = \frac{\hbar}{2}$ and its formula is as follows:
 
-## Simple Demonstration
+```math
+\psi_{MEWP}(x) = \left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x}}e^{\frac{i}{\hbar}\overline{p}x}
+```
+
+Having $\Psi(x, 0)$ as $\psi_{MEWP}(x)$, we can calculate $c(\kappa) = \langle \psi_\kappa | \psi_{MEWP} \rangle$ explicitly and use it in the simulation. Moreover, if the initial wave packet starts its movement far enough from the wall (for example $\overline{x} = -a - 12\sigma_x$), the effect of the second and the third part of the eigenfunction is negligible in the integration, meaning:
+
+
+```math
+\langle \psi_\kappa | \psi_{MEWP} \rangle \approx \int_{-\infty}^{+\infty} \left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x}}e^{\frac{i}{\hbar}\overline{p}x} \left(\frac{1}{\sqrt{2\pi}}e^{-i\kappa x} + \frac{r}{\sqrt{2\pi}}e^{i\kappa x}\right) dx
+```
+```math
+= \int_{-\infty}^{+\infty} \left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x}}e^{\frac{i}{\hbar}\overline{p}x}\frac{1}{\sqrt{2\pi}}e^{-i\kappa x} dx + \int_{-\infty}^{+\infty} \left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x}}e^{\frac{i}{\hbar}\overline{p}x}\frac{r}{\sqrt{2\pi}}e^{i\kappa x} dx 
+```
+```math
+= \frac{1}{\sqrt{2\pi}}\left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}\int_{-\infty}^{+\infty}e^{\left[\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x} + i\left(\frac{\overline{p}}{\hbar} - \kappa\right)x\right]} dx + \frac{r}{\sqrt{2\pi}}\left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}\int_{-\infty}^{+\infty}e^{\left[\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x} + i\left(\frac{\overline{p}}{\hbar} + \kappa\right)x\right]} dx
+```
+
+Recall:
+
+
+```math
+\int_{-\infty}^{+\infty} e^{-ax^2 + bx} dx = \int_{-\infty}^{+\infty} e^{-a\left(x - \frac{b}{2a}\right)^2 + \frac{b^2}{4a}} dx = e^{\frac{b^2}{4a}}\sqrt{\frac{\pi}{a}}
+```
+
+Therefore:
+
+```math
+= \frac{1}{\sqrt{2\pi}}\left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}\int_{-\infty}^{+\infty}e^{\left[\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x} + i\left(\frac{\overline{p}}{\hbar} - \kappa\right)\left(x - \overline{x}\right) + i\left(\frac{\overline{p}}{\hbar} - \kappa\right)\overline{x}\right]} dx + \frac{r}{\sqrt{2\pi}}\left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}\int_{-\infty}^{+\infty}e^{\left[\frac{-\left(x-\overline{x}\right)^2}{4\sigma^2_x} + i\left(\frac{\overline{p}}{\hbar} + \kappa\right)\left(x - \overline{x}\right) + i\left(\frac{\overline{p}}{\hbar} + \kappa\right)\overline{x}\right]} dx
+```
+
+```math
+\implies \langle \psi_\kappa | \psi_{MEWP} \rangle = \frac{e^{i\left(\frac{\overline{p}}{\hbar} - \kappa\right)\overline{x}}}{\sqrt{2\pi}}\left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\left[i\left(\frac{\overline{p}}{\hbar} - \kappa\right)\right]^2\sigma^2_x}\sqrt{4\pi\sigma^2_x} + \frac{re^{i\left(\frac{\overline{p}}{\hbar} + \kappa\right)\overline{x}}}{\sqrt{2\pi}}\left(\frac{1}{2\pi\sigma^2_x}\right)^{\frac{1}{4}}e^{\left[i\left(\frac{\overline{p}}{\hbar} + \kappa\right)\right]^2\sigma^2_x}\sqrt{4\pi\sigma^2_x}
+```
+
+```math
+c(\kappa) = \langle \psi_\kappa | \psi_{MEWP} \rangle = \left[\frac{e^{i\left(\frac{\overline{p}}{\hbar} - \kappa\right)\overline{x}}}{\sqrt[4]{2\pi\left(\frac{1}{4\sigma^2_x}\right)}}\right]e^{\frac{-\left(\frac{\overline{p}}{\hbar} - \kappa\right)^2}{4\left(\frac{1}{4\sigma^2_x}\right)}} + \left[\frac{re^{i\left(\frac{\overline{p}}{\hbar} + \kappa\right)\overline{x}}}{\sqrt[4]{2\pi\left(\frac{1}{4\sigma^2_x}\right)}}\right]e^{\frac{-\left(\frac{\overline{p}}{\hbar} + \kappa\right)^2}{4\left(\frac{1}{4\sigma^2_x}\right)}}
+```
+
+
+Using this formula, the coefficient of each eigenstate in superposition can be calculated.
+
 
 ## Conclusion
+In this article, the Finite Potential Wall problem was studied and analysed. The eigenstates of hamiltonian were calculated along with their 
+
+
+## Simple Demonstration
