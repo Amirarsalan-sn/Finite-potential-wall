@@ -468,4 +468,4 @@ In this article, the Finite Potential Wall problem was studied and analysed. The
 
 
 ## Simple Demonstration
-To veiw a run sample of the simulation code you can see my [linkedin post](). Feel free to share your opinion on this project with me. Thank you for reading this article, hope you've enjoyed this simulation project!
+To veiw a run sample of the simulation code you can see my [linkedin post](https://www.linkedin.com/posts/amir-arsalan-sanati_quantumtunneling-quantummechanics-physicssimulation-activity-7314739800253640704-6i4l?utm_source=share&utm_medium=member_ios&rcm=ACoAAEZAVfsBl2J7wkiMeMaYWEDx-yRXdXomNII). Feel free to share your opinion on this project with me. Thank you for reading this article, hope you've enjoyed this simulation project!
